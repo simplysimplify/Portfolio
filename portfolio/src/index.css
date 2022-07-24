@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(231, 244, 255),
+    rgb(141, 146, 150)
+  );
+  font-family: "Nunito", sans-serif;
+  height: 100%;
+  --gradient1: linear-gradient(
+    to bottom,
+    rgb(216, 225, 231),
+    rgb(189, 196, 201)
+  );
+  --gradient2: linear-gradient(to top, rgb(221, 233, 236), rgb(189, 196, 201));
+}
+
+/* Semantic tags */
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+  margin-top: 2vw;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  padding-bottom: 1vw;
+  max-width: 10vw;
+  justify-items: center;
+}
+
+button {
+  opacity: 0%;
+  position: absolute;
+  width: 31vw;
+  height: 5vw;
+  margin-left: -1vw;
+  margin-top: -1vw;
+}
+
+/* Class tags */
+
+.PopoutButton {
+  display: flex;
+  background-image: var(--gradient1);
+  font-size: 3vw;
+  margin-top: 2vw;
+  width: 30vw;
+  height: 4vw;
+  padding-top: 1vw;
+  padding-left: 1vw;
+  outline-style: solid;
+  outline-color: rgb(155, 174, 177);
+  outline-width: 0.1vw;
+  border-radius: 0.5vw;
+}
+
+.pageBreak {
+  display: flex;
+  position: absolute;
+  margin-left: 38vw;
+  margin-top: -27vw;
+  width: 0.2vw;
+  height: 55%;
+  background-color: black;
+  font-size: 0%;
+}
+
+.PopoutPage {
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  visibility: hidden;
+  position: absolute;
+  background-image: var(--gradient2);
+  height: fit-content;
+  width: 48.5vw;
+  margin-left: 40vw;
+  margin-top: -15vw;
+  outline-style: solid;
+  outline-color: rgb(155, 174, 177);
+  outline-width: 0.1vw;
+  font-size: 1.2vw;
+  padding: 2vw;
+  max-height: 40vw;
+}
+
+/* ID tags */
+
+#head {
+  text-shadow: 0.2vw 0.2vw #cecece;
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  width: 100vw;
+}
+
+/* Added text id's need a +7vw top-margin */
+
+#Portfolio {
+  margin-top: -1vw;
+}
+
+#Education {
+  margin-top: -8vw;
+}
+
+#Accomplishments {
+  margin-top: -15vw;
+}
+
+#ContactInfo {
+  margin-top: -22vw;
+}
+
+/* Pseudo-classes */
+
+.PopoutButton:hover {
+  background-image: var(--gradient2);
+}
+
+button:focus + .PopoutPage {
+  visibility: visible;
+}
+
+@media screen and (max-width: 400px) {
+  .PopoutPage {
+    font-size: 2.4vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .PopoutPage {
+    font-size: 1.8vw;
+  }
+}
